@@ -24,8 +24,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: (https://github.com/JuanCalle94/product-card-challenge)
-- Live Site URL: ()
+- Solution URL: (https://github.com/JuanCalle94/interactive-rating-component)
+- Live Site URL: (https://juancalle94.github.io/interactive-rating-component/)
 
 ## My process
 
