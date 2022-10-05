@@ -1,16 +1,16 @@
 /* Globals */
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 .center {
-    text-align: center
+  text-align: center;
 }
 
 /* Fonts */
@@ -33,150 +33,159 @@ $verydarkblue: hsl(216, 12%, 8%);
 /* Media Queries */
 $tablet: 426px;
 $desktop: 1440px;
+$desktophd: 1900px;
 
 /* Mixins */
 @mixin tablet {
-    @media (min-width: $tablet) {
-        @content;
-    }
+  @media (min-width: $tablet) {
+    @content;
   }
-  
-  @mixin desktop {
-    @media (min-width: $desktop) {
-        @content;
-    }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
   }
+}
+
+@mixin desktophd {
+  @media (min-width: $desktophd) {
+    @content;
+  }
+}
 
 body {
-    height: 100vh;
-    font-family: $mainfont;
-    background-color: $verydarkblue;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+  height: 100vh;
+  font-family: $mainfont;
+  background-color: $verydarkblue;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: $darkblue;
+  border-radius: 20px;
+  padding: 30px;
+  width: 90%;
 
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    background-color: $darkblue;
-    border-radius: 20px;
-    padding: 30px;
-    width: 90%;
-
-    &__star {
-        background-color: rgba(46, 54, 61, 0.979);
-        border-radius: 50%;
-        padding: 12px;
-        width: 15%;
-
-        @include desktop() {
-            width: 13%;
-        }
-    }
-    
-    &__tittle {
-        font-size: 25px;
-        color: $white;
-        font-weight: $bold;
-        margin: 30px 0 15px;
-    }
-
-    &__text {
-        font-size: 15px;
-        color: $mediumgrey;
-        font-weight: $regular;
-    }
-
-    &__list {
-        display: flex;
-        justify-content: space-between;
-        margin: 30px 0;
-
-        &--number {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 45px;
-            width: 45px;
-            border-radius: 50%;
-            background-color: rgba(46, 54, 61, 0.979);
-            color: $mediumgrey;
-            font-size: 14px;
-            font-weight: $bold;
-            padding: 10px;
-
-            &:hover {
-                background-color: $mediumgrey;
-                color: $white;
-            }
-        }
-    }
-
-    &__button {
-        cursor: pointer;
-        font-size: 13px;
-        width: 100%;
-        padding: 15px 40px;
-        border: none;
-        border-radius: 25px;
-        background-color: $orange;
-        color: $white;
-        font-weight: $bold;
-        text-transform: uppercase;
-        letter-spacing: 4px;
-
-        &:hover {
-            background-color: $white;
-            color: $orange;
-        }
-    }
-
-    &__empty {
-        font-size: 12px;
-        color: $orange;
-        margin-top: 20px;
-        text-align: center;
-    }
-
-    &__result {
-        align-self: center;
-        background-color: rgba(46, 54, 61, 0.979);
-        width: 70%;
-        padding: 5px 10px;
-        font-size: 14px;
-        font-weight: $regular;
-        color: $orange;
-        border-radius: 20px;
-    }
-
-    &__img {
-        width: 60%;
-        margin-bottom: 30px;
-        align-self: center;
-    }
-
-    @include tablet {
-        width: 45%;
-    }
+  &__star {
+    background-color: rgba(46, 54, 61, 0.979);
+    border-radius: 50%;
+    padding: 12px;
+    width: 15%;
 
     @include desktop() {
-        width: 21%;
+      width: 13%;
     }
+  }
 
+  &__tittle {
+    font-size: 25px;
+    color: $white;
+    font-weight: $bold;
+    margin: 30px 0 15px;
+  }
+
+  &__text {
+    font-size: 15px;
+    color: $mediumgrey;
+    font-weight: $regular;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+
+    &--number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 45px;
+      width: 45px;
+      border-radius: 50%;
+      background-color: rgba(46, 54, 61, 0.979);
+      color: $mediumgrey;
+      font-size: 14px;
+      font-weight: $bold;
+      padding: 10px;
+
+      &:hover {
+        background-color: $mediumgrey;
+        color: $white;
+      }
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+    font-size: 13px;
+    width: 100%;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 25px;
+    background-color: $orange;
+    color: $white;
+    font-weight: $bold;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+
+    &:hover {
+      background-color: $white;
+      color: $orange;
+    }
+  }
+
+  &__empty {
+    font-size: 12px;
+    color: $orange;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  &__result {
+    align-self: center;
+    background-color: rgba(46, 54, 61, 0.979);
+    width: 70%;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: $regular;
+    color: $orange;
+    border-radius: 20px;
+  }
+
+  &__img {
+    width: 60%;
+    margin-bottom: 30px;
+    align-self: center;
+  }
+
+  @include tablet {
+    width: 45%;
+  }
+
+  @include desktop() {
+    width: 25%;
+  }
+
+  @include desktophd() {
+    width: 20%;
+  }
 }
 
 .selected {
-    background-color: $orange;
-    color: $white;
+  background-color: $orange;
+  color: $white;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
 
 .attribution {
@@ -184,8 +193,7 @@ body {
   text-align: center;
   color: $mediumgrey;
 
-    a {
-        color: $orange;
-    }
+  a {
+    color: $orange;
+  }
 }
-

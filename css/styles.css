@@ -128,7 +128,12 @@ body {
 }
 @media (min-width: 1440px) {
   .card {
-    width: 21%;
+    width: 25%;
+  }
+}
+@media (min-width: 1900px) {
+  .card {
+    width: 20%;
   }
 }
 
